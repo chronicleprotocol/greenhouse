@@ -2,7 +2,7 @@
 
 The `Greenhouse` contract provides a contract factory with deterministic addresses solely depending on a given salt.
 
-To remove a contract's initcode factory from the address generation, `Greenhouse` uses [CREATE3](./src/libs/LibCREATE3.sol).
+To remove a contract's initcode factor from the address generation, `Greenhouse` uses [CREATE3](./src/libs/LibCREATE3.sol).
 
 The contract uses [`chronicle-std/Auth`](https://github.com/chronicleprotocol/chronicle-std)'s `Auth` module to grant addresses access to protected functions. [`chronicle-std`](https://github.com/chronicleprotocol/chronicle-std)'s `Toll` module is utilized to determine which addresses are eligible to plant new contracts.
 

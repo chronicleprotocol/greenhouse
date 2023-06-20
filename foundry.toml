@@ -1,6 +1,35 @@
 [profile.default]
-src = "src"
-out = "out"
-libs = ["lib"]
+src = 'src'
+out = 'out'
+libs = ['lib']
+ffi = true
+
+# Compilation
+solc_version = "0.8.16"
+optimizer = true
+optimizer_runs = 10_000
+via_ir = true
+extra_output_files = ["metadata", "irOptimized"]
+
+# Testing
+fuzz = { runs = 256 }
+block_timestamp = 1_680_220_800 # March 31, 2023 at 00:00 GMT
+
+[fmt]
+line_length = 80
+int_types = "short"
+number_underscore = "preserve"
+ignore = []
+
+[doc]
+out = "docs_generated" # Note to not overwrite own docs
+
+# Profile for intense testing
+# Run via `FOUNDRY_PROFILE=intense forge t`
+[profile.intense]
+[profile.intense.fuzz]
+runs = 10_000
+[profile.intense.invariant]
+runs = 10_000
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config

@@ -1,0 +1,7 @@
+GreenhouseTest:testFuzz_plant_ContractWithArguments(bytes32) (runs: 256, μ: 163626, ~: 163626)
+GreenhouseTest:testFuzz_plant_ContractWithoutArguments(bytes32) (runs: 256, μ: 119095, ~: 119095)
+GreenhouseTest:testFuzz_plant_FailsIf_SaltAlreadyUsed(bytes32) (runs: 256, μ: 8937393460516732915, ~: 8937393460516732816)
+GreenhouseTest:test_addressOf_FailsIf_SaltIsEmpty() (gas: 8560)
+GreenhouseTest:test_plant_FailsIf_CreationCodeIsEmpty() (gas: 11515)
+GreenhouseTest:test_plant_FailsIf_SaltIsEmpty() (gas: 12083)
+GreenhouseTest:test_plant_IsTollProtected() (gas: 13402)

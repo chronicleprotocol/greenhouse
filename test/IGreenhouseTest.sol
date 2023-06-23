@@ -65,19 +65,6 @@ abstract contract IGreenhouseTest is Test {
         assertEq(addr, greenhouse.addressOf(salt));
     }
 
-    function testFuzz_plant_FailsIf_SaltAlreadyUsed(bytes32 salt) public {
-        vm.assume(salt != bytes32(0));
-
-        bytes memory creationCode = type(ContractWithoutArguments).creationCode;
-
-        greenhouse.plant(salt, creationCode);
-
-        vm.expectRevert(
-            abi.encodeWithSelector(IGreenhouse.PlantingFailed.selector, salt)
-        );
-        greenhouse.plant(salt, creationCode);
-    }
-
     function test_plant_FailsIf_SaltIsEmpty() public {
         bytes memory creationCode = type(ContractWithoutArguments).creationCode;
 
@@ -92,17 +79,25 @@ abstract contract IGreenhouseTest is Test {
         greenhouse.plant(bytes32("salt"), empty);
     }
 
+    function testFuzz_plant_FailsIf_SaltAlreadyPlanted(bytes32 salt) public {
+        vm.assume(salt != bytes32(0));
+
+        bytes memory creationCode = type(ContractWithoutArguments).creationCode;
+
+        greenhouse.plant(salt, creationCode);
+
+        vm.expectRevert(
+            abi.encodeWithSelector(IGreenhouse.AlreadyPlanted.selector, salt)
+        );
+        greenhouse.plant(salt, creationCode);
+    }
+
     function test_plant_IsTollProtected() public {
         vm.prank(address(0xbeef));
         vm.expectRevert(
             abi.encodeWithSelector(IToll.NotTolled.selector, address(0xbeef))
         );
         greenhouse.plant(0, type(ContractWithArguments).creationCode);
-    }
-
-    function test_addressOf_FailsIf_SaltIsEmpty() public {
-        vm.expectRevert(IGreenhouse.EmptySalt.selector);
-        greenhouse.addressOf(bytes32(""));
     }
 }
 

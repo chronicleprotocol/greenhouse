@@ -41,6 +41,10 @@ contract Greenhouse is IGreenhouse, Auth, Toll {
             revert EmptyCreationCode();
         }
 
+        if (addressOf(salt).code.length != 0) {
+            revert AlreadyPlanted(salt);
+        }
+
         bool ok;
         address addr;
         (ok, addr) = LibCREATE3.tryDeploy(salt, creationCode);
@@ -56,10 +60,6 @@ contract Greenhouse is IGreenhouse, Auth, Toll {
 
     /// @inheritdoc IGreenhouse
     function addressOf(bytes32 salt) public view returns (address) {
-        if (salt == bytes32(0)) {
-            revert EmptySalt();
-        }
-
         return LibCREATE3.addressOf(salt);
     }
 

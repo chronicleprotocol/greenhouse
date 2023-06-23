@@ -2,6 +2,10 @@
 pragma solidity ^0.8.16;
 
 interface IGreenhouse {
+    /// @notice Thrown if salt `salt` already planted.
+    /// @param salt The salt to plant.
+    error AlreadyPlanted(bytes32 salt);
+
     /// @notice Thrown if planting at salt `salt` failed.
     /// @param salt The salt to plant.
     error PlantingFailed(bytes32 salt);

@@ -9,6 +9,7 @@ The contract uses [`chronicle-std/Auth`](https://github.com/chronicleprotocol/ch
 ## Installation
 
 Install module via Foundry:
+
 ```bash
 $ forge install chronicleprotocol/greenhouse@v1
 ```
@@ -18,6 +19,7 @@ $ forge install chronicleprotocol/greenhouse@v1
 The project uses the Foundry toolchain. You can find installation instructions [here](https://getfoundry.sh/).
 
 Setup:
+
 ```bash
 $ git clone https://github.com/chronicleprotocol/greenhouse
 $ cd greenhouse
@@ -25,6 +27,7 @@ $ forge install
 ```
 
 Run tests:
+
 ```bash
 $ forge test
 $ forge test -vvvv # Run with full stack traces
@@ -32,13 +35,25 @@ $ FOUNDRY_PROFILE=intense forge test # Run in intense mode
 ```
 
 Lint:
+
 ```bash
 $ forge fmt [--check]
 ```
 
 Update gas snapshots:
+
 ```bash
 $ forge snapshot [--check]
+```
+
+## Deploy
+
+```
+forge create --rpc-url $ETH_RPC_URL \
+	--private-key $YOUR_PRIVATE_KEY \
+	src/Greenhouse.sol:Greenhouse \
+	--constructor-args $AUTHED_DEPLOYER \
+	--verify
 ```
 
 ## Dependencies

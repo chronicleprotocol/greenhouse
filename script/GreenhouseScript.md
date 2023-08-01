@@ -31,9 +31,7 @@ $ forge script \
 
 ## Management
 
-`Greenhouse` implements `chronicle-std`'s `Auth` and `Toll` modules which can be configured.
-
-Set the following environment variables:
+The following environment variables are necessary for all management commands:
 - `GREENHOUSE`: The `Greenhouse` instance's address
 
 ### `IAuth::rely`

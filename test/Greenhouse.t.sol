@@ -7,6 +7,6 @@ import {IGreenhouseTest} from "./IGreenhouseTest.sol";
 
 contract GreenhouseTest is IGreenhouseTest {
     function setUp() public {
-        setUp(address(new Greenhouse()));
+        setUp(address(new Greenhouse(address(this))));
     }
 }

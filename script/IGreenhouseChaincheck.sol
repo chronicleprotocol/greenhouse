@@ -14,25 +14,25 @@ import {IGreenhouse} from "src/IGreenhouse.sol";
  * @notice IGreenhouse's `chaincheck` Integration Test
  *
  * @dev Config Definition:
- * ```json
- * {
- *     "IGreenhouse": { },
- *     "IAuth": {
- *         "legacy": bool,
- *         "authed": [
- *             "<Ethereum address>",
- *             ...
- *         ]
- *     },
- *     "IToll": {
- *         "legacy": bool,
- *         "tolled": [
- *             "<Ethereum address>",
- *             ...
- *         ]
- *     }
- * }
- * ```
+ *      ```json
+ *      {
+ *          "IGreenhouse": { },
+ *          "IAuth": {
+ *              "legacy": bool,
+ *              "authed": [
+ *                  "<Ethereum address>",
+ *                  ...
+ *              ]
+ *          },
+ *          "IToll": {
+ *              "legacy": bool,
+ *              "tolled": [
+ *                  "<Ethereum address>",
+ *                  ...
+ *              ]
+ *          }
+ *      }
+ *      ```
  */
 contract IGreenhouseChaincheck is Chaincheck {
     using stdJson for string;

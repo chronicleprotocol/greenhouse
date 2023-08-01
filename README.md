@@ -10,7 +10,7 @@ The contract uses [`chronicle-std/Auth`](https://github.com/chronicleprotocol/ch
 
 Install module via Foundry:
 ```bash
-$ forge install chronicleprotocol/greenhouse
+$ forge install chronicleprotocol/greenhouse@v1
 ```
 
 ## Contributing
@@ -43,4 +43,4 @@ $ forge snapshot [--check]
 
 ## Dependencies
 
-- [chronicleprotocol/chronicle-std@v1](https://github.com/chronicleprotocol/chronicle-std/tree/v1)
+- [chronicleprotocol/chronicle-std@v2](https://github.com/chronicleprotocol/chronicle-std/tree/v2)

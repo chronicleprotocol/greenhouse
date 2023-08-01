@@ -10,6 +10,7 @@ import {LibCREATE3} from "./libs/LibCREATE3.sol";
 
 /**
  * @title Greenhouse
+ * @custom:version 1.0.0
  *
  * @notice A greenhouse to plant contracts using CREATE3
  *
@@ -24,6 +25,8 @@ import {LibCREATE3} from "./libs/LibCREATE3.sol";
  *      contracts.
  */
 contract Greenhouse is IGreenhouse, Auth, Toll {
+    constructor(address initialAuthed) Auth(initialAuthed) {}
+
     /// @inheritdoc IGreenhouse
     ///
     /// @custom:invariant Planted contract's address is deterministic and solely

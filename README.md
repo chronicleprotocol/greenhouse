@@ -46,16 +46,6 @@ Update gas snapshots:
 $ forge snapshot [--check]
 ```
 
-## Deploy
-
-```
-forge create --rpc-url $ETH_RPC_URL \
-	--private-key $YOUR_PRIVATE_KEY \
-	src/Greenhouse.sol:Greenhouse \
-	--constructor-args $AUTHED_DEPLOYER \
-	--verify
-```
-
 ## Dependencies
 
 - [chronicleprotocol/chronicle-std@v2](https://github.com/chronicleprotocol/chronicle-std/tree/v2)

@@ -9,7 +9,7 @@ The following environment variables must be set:
 - `RPC_URL`: The RPC URL of an EVM node
 - `PRIVATE_KEY`: The private key to use
 - `ETHERSCAN_API_KEY`: The Etherscan API key for the Etherscan's chain instance
-- `INITIAL_AUTHED`: The address being auth'ed on the newly deployed `Scribe` instance
+- `INITIAL_AUTHED`: The address being auth'ed on the newly deployed `Greenhouse` instance
 
 Note that an `.env.example` file is provided in the project root. To set all environment variables at once, create a copy of the file and rename the copy to `.env`, adjust the variable's values', and run `source .env`.
 

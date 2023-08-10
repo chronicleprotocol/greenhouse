@@ -47,7 +47,7 @@ $ forge script \
 
 Set the following environment variables:
 
-- `WHO`: The address renounce auth from
+- `WHO`: The address to renounce auth from
 
 Run:
 
@@ -65,7 +65,7 @@ $ forge script \
 
 Set the following environment variables:
 
-- `WHO`: The address grant toll to
+- `WHO`: The address to grant toll to
 
 Run:
 
@@ -83,7 +83,7 @@ $ forge script \
 
 Set the following environment variables:
 
-- `WHO`: The address renounce toll from
+- `WHO`: The address to renounce toll from
 
 Run:
 

@@ -31,7 +31,6 @@ contract Greenhouse is IGreenhouse, Auth, Toll {
     ///
     /// @custom:invariant Planted contract's address is deterministic and solely
     ///                   depends on `salt`.
-    ///                     ∀s ∊ bytes32: plant(s, _) = addressOf(s)
     function plant(bytes32 salt, bytes memory creationCode)
         external
         toll

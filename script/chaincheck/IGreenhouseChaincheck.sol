@@ -14,9 +14,10 @@ import {IGreenhouse} from "src/IGreenhouse.sol";
  * @notice IGreenhouse's `chaincheck` Integration Test
  *
  * @dev Config Definition:
+ *
  *      ```json
  *      {
- *          "IGreenhouse": { },
+ *          "IGreenhouse": {},
  *          "IAuth": {
  *              "legacy": bool,
  *              "authed": [

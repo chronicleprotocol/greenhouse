@@ -19,6 +19,7 @@ import {IGreenhouse} from "src/IGreenhouse.sol";
  *      {
  *          "IGreenhouse": {},
  *          "IAuth": {
+ *              "disabled": bool,
  *              "legacy": bool,
  *              "authed": [
  *                  "<Ethereum address>",
@@ -26,6 +27,7 @@ import {IGreenhouse} from "src/IGreenhouse.sol";
  *              ]
  *          },
  *          "IToll": {
+ *              "disabled": bool,
  *              "legacy": bool,
  *              "tolled": [
  *                  "<Ethereum address>",

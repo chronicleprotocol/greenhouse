@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.16;
+pragma solidity ^0.8.24;
 
-import {Test} from "forge-std/Test.sol";
+import {Test} from "forge-std@v1.9.6/Test.sol";
 
-import {IToll} from "chronicle-std/toll/IToll.sol";
+import {IToll} from "chronicle-std@v2/toll/IToll.sol";
 
 import {IGreenhouse} from "src/IGreenhouse.sol";
 

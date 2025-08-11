@@ -20,6 +20,9 @@ jobs:
         with:
           version: nightly
 
+      - name: Install deps
+        run: forge soldeer install
+
       - name: Run Forge build
         run: forge build
         id: build

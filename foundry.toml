@@ -1,11 +1,11 @@
 [profile.default]
 src = 'src'
 out = 'out'
-libs = ['lib']
+libs = ['dependencies']
 ffi = true
 
 # Compilation
-solc_version = "0.8.16"
+solc_version = "0.8.24"
 optimizer = true
 optimizer_runs = 10_000
 via_ir = true
@@ -32,4 +32,16 @@ runs = 10_000
 [profile.intense.invariant]
 runs = 10_000
 
-# See more config options https://github.com/foundry-rs/foundry/tree/master/config
+[soldeer]
+# See https://github.com/mario-eth/soldeer/blob/main/USAGE.md#configuration
+remappings_generate = false
+remappings_regenerate = false
+remappings_version = false
+remappings_location = "txt"
+
+# whether to install sub-dependencies or not. If true this will install the dependencies of dependencies recursively.
+recursive_deps = false
+
+[dependencies]
+chronicle-std = { version = "2", git = "https://github.com/chronicleprotocol/chronicle-std", rev = "ea9afe78a1d33245afcdbcc3f530ee9cbd7cde28" }
+forge-std = "1.9.6"

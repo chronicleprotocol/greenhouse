@@ -19,3 +19,5 @@ abis/
 
 # Flattened directory
 flattened/
+
+dependencies/

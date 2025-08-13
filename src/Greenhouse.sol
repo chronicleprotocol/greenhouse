@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.16;
+pragma solidity ^0.8.24;
 
-import {Auth} from "chronicle-std/auth/Auth.sol";
-import {Toll} from "chronicle-std/toll/Toll.sol";
+import {Auth} from "chronicle-std@v2/auth/Auth.sol";
+import {Toll} from "chronicle-std@v2/toll/Toll.sol";
 
 import {IGreenhouse} from "./IGreenhouse.sol";
 

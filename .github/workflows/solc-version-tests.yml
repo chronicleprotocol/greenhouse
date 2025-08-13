@@ -20,9 +20,12 @@ jobs:
         with:
           version: nightly
 
+      - name: Install deps
+        run: forge soldeer install
+
       - name: Run Forge tests for each supported solc version
         run: >
-          FOUNDRY_PROFILE=ci forge test --use 0.8.16 &&
-          FOUNDRY_PROFILE=ci forge test --use 0.8.17 &&
-          FOUNDRY_PROFILE=ci forge test --use 0.8.18 &&
-          FOUNDRY_PROFILE=ci forge test --use 0.8.19
+          FOUNDRY_PROFILE=ci forge test --use 0.8.24 &&
+          FOUNDRY_PROFILE=ci forge test --use 0.8.25 &&
+          FOUNDRY_PROFILE=ci forge test --use 0.8.26 &&
+          FOUNDRY_PROFILE=ci forge test --use 0.8.27

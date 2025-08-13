@@ -20,5 +20,8 @@ jobs:
         with:
           version: nightly
 
+      - name: Install deps
+        run: forge soldeer install
+
       - name: Check gas snapshots
         run: forge snapshot --check

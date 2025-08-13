@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.16;
+pragma solidity ^0.8.24;
 
-import {Script} from "forge-std/Script.sol";
-import {console2} from "forge-std/console2.sol";
+import {Script, console2} from "forge-std@v1.9.6/Script.sol";
 
-import {IAuth} from "chronicle-std/auth/IAuth.sol";
-import {IToll} from "chronicle-std/toll/IToll.sol";
+import {IAuth} from "chronicle-std@v2/auth/IAuth.sol";
+import {IToll} from "chronicle-std@v2/toll/IToll.sol";
 
 import {IGreenhouse} from "src/IGreenhouse.sol";
 import {Greenhouse} from "src/Greenhouse.sol";

@@ -1,4 +1,2 @@
-ds-test/=lib/forge-std/lib/ds-test/src/
-forge-std/=lib/forge-std/src/
-
-chronicle-std/=lib/chronicle-std/src/
+chronicle-std@v2/=dependencies/chronicle-std-2/src/
+forge-std@v1.9.6/=dependencies/forge-std-1.9.6/src/

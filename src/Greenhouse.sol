@@ -10,7 +10,7 @@ import {LibCREATE3} from "./libs/LibCREATE3.sol";
 
 /**
  * @title Greenhouse
- * @custom:version 1.0.0
+ * @custom:version 1.1.0
  *
  * @notice A greenhouse to plant contracts using CREATE3
  *
